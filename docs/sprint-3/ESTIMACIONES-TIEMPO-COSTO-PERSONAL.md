@@ -1,142 +1,228 @@
 # ESTIMACIÓN DE TIEMPO, COSTOS Y PERSONAL REQUERIDO
 
-**Instituto Tecnológico de Tlaxiaco**  
-**Carrera:** Ingeniería en Sistemas Computacionales  
+**Tecnológico Nacional de México — Instituto Tecnológico de Tlaxiaco**
+
 **Asignatura:** Gestión de Proyectos de Software (SCG-1009)  
 **Unidad:** 3. Planificación del Proyecto  
 **Sprint:** 3  
 **Proyecto:** Sistema de Control y Comercialización de la Producción de Miel  
 **Organización beneficiaria:** Unión de Productores de Miel de San Juan Ñumí, Oaxaca  
-**Equipo:** UMIZOOMI  
-**Integrantes:** Diego Fidel Sosa Cruz, Félix Ángel García García, Daniel Alejandro López Camarillo y Luis Alexis Morales José.  
-**Marco de trabajo:** eduScrum
+**Equipo de desarrollo:** UMIZOOMI  
+**Integrantes:** Félix Ángel García García, Diego Fidel Sosa Cruz, Daniel Alejandro López Camarillo y Luis Alexis Morales José  
+**Metodología:** eduScrum  
+**Versión:** 2.0 — Propuesta de planificación pendiente de validación
 
 ---
 
 ## 1. Introducción
 
-La estimación de tiempo, costos y personal es un proceso necesario para planificar el desarrollo de software. Permite identificar el esfuerzo requerido para implementar las funcionalidades, distribuir responsabilidades y determinar los recursos necesarios para alcanzar los objetivos.
+La planificación de un proyecto de software requiere estimar el esfuerzo necesario para desarrollar sus funcionalidades, determinar los recursos económicos y distribuir las responsabilidades entre los integrantes del equipo.
 
-En el Sistema de Control y Comercialización de la Producción de Miel se busca mejorar la organización de los registros de productores, cosechas, inventario y comercialización de la Unión de Productores de Miel de San Juan Ñumí, Oaxaca.
+El presente documento desarrolla una propuesta de estimaciones para el Sistema de Control y Comercialización de la Producción de Miel, cuyo propósito es mejorar el registro de productores, las cosechas, el inventario y las actividades de comercialización de la Unión de Productores de Miel de San Juan Ñumí, Oaxaca.
 
-La planificación toma como referencia el objetivo SMART del Sprint 3 y los criterios de aseguramiento de calidad del Sprint 2.
+Las estimaciones se relacionan con la auditoría de historias de usuario del Sprint 1 y con el Costo de la Calidad documentado en el Sprint 2, conforme a la instrumentación didáctica de la Unidad 3.
 
-## 2. Objetivo
+## 2. Objetivo general
 
-Estimar las horas de trabajo, los costos y los recursos humanos necesarios para desarrollar el sistema de control y comercialización de miel, considerando las funcionalidades propuestas, las actividades de prevención y corrección de defectos y la organización del equipo mediante eduScrum.
+Estimar el tiempo de desarrollo, los costos económicos y el personal requerido para implementar las funcionalidades del sistema de miel, estableciendo una distribución de responsabilidades verificable y mecanismos de seguimiento mediante GitHub Projects y eduScrum.
 
-## 3. Alcance funcional
+## 3. Relación con el Sprint 1: Backlog
 
-El documento de viabilidad del proyecto identifica las siguientes áreas funcionales:
+En el repositorio de historias de usuario del equipo se identifican registros relacionados con la producción y comercialización de miel.
 
-| Código de planificación | Funcionalidad | Descripción |
+| Identificador | Funcionalidad | Evidencia disponible |
 |---|---|---|
-| F-01 | Registro de productores | Registrar y consultar información de apicultores. |
-| F-02 | Control de cosechas | Registrar cantidades y datos de cosechas de miel. |
-| F-03 | Administración del inventario | Controlar existencias y movimientos de productos. |
-| F-04 | Control de comercialización | Registrar ventas y consultar movimientos comerciales. |
-| F-05 | Consulta de información | Facilitar consultas y seguimiento de los registros. |
+| HU-P1-003 | Control de inventario disponible | Auditoría de IA, con alerta de inventario inferior a 10 kg |
+| HU-P1-004 | Registro de ventas y clientes | Historia corregida con validación para ventas superiores a existencias |
+| HU-P1-005 | Reporte mensual | Historia corregida con exportación PDF |
+| F-01, provisional | Registro de productores | Descrito en el documento SMART |
+| F-02, provisional | Registro y control de cosechas | Descrito en el documento SMART |
 
-Los códigos F-01 a F-05 se utilizan para organizar esta estimación y no sustituyen los identificadores oficiales de las historias de usuario del Backlog.
+Las claves F-01 y F-02 son identificadores de planificación, no historias oficiales confirmadas. Antes de cerrar la evidencia se deben sustituir por sus códigos reales del Backlog.
 
-## 4. Antecedentes del Sprint 2
+### Criterios de aceptación relevantes
 
-El Plan de Calidad del equipo presenta los siguientes cálculos:
+**Registro de productores:** permitir capturar y consultar datos de los productores participantes, validando campos obligatorios.
 
-| Historia registrada | Prevención | Corrección | Total |
+**Control de cosechas:** permitir registrar las cantidades de miel obtenidas y consultar los registros asociados con cada productor.
+
+**HU-P1-003, inventario:** controlar la cantidad disponible y utilizar el umbral de alerta de 10 kg señalado en la auditoría.
+
+**HU-P1-004, ventas:** registrar cliente, fecha, cantidad y precio; descontar existencias y rechazar operaciones que excedan el inventario disponible.
+
+**HU-P1-005, reporte mensual:** mostrar los totales de producción, inventario y ventas; permitir exportación PDF y asegurar que los totales coincidan con los registros.
+
+## 4. Trazabilidad con el Sprint 2: Costo de la Calidad
+
+El Plan de Calidad del equipo contiene tres historias correspondientes a diferentes iniciativas de Open Hub Tec:
+
+| Historia del Plan de Calidad | Prevención | Corrección | Total |
 |---|---:|---:|---:|
-| HU-01: Producción y venta de miel | 6 h | 2 h | 8 h |
-| HU-02: Cobros y control de locatarios del mercado | 5 h | 3 h | 8 h |
-| HU-03: Trazabilidad de mezcal artesanal | 7 h | 1 h | 8 h |
-| **Total del plan general** | **18 h** | **6 h** | **24 h** |
+| HU-01, producción y venta de miel | 6 h | 2 h | 8 h |
+| HU-02, locatarios del mercado | 5 h | 3 h | 8 h |
+| HU-03, trazabilidad de mezcal | 7 h | 1 h | 8 h |
+| **Total general** | **18 h** | **6 h** | **24 h** |
 
-La HU-01 está directamente relacionada con el sistema de miel. Las otras historias corresponden a iniciativas diferentes del ecosistema Open Hub Tec.
+El total de 24 horas corresponde al plan general y no debe confundirse con la estimación exclusiva del proyecto de miel.
 
-Por tanto, las 24 horas no se consideran automáticamente la estimación exclusiva del sistema de miel. Para completar su planificación se propone una estimación específica que deberá validar el equipo.
+Para esta actividad se toma como referencia verificable la inversión de **6 horas de prevención y 2 horas de corrección** vinculada con producción y venta de miel.
 
-## 5. Estimación del esfuerzo
+Se propone distribuir las horas de calidad del proyecto completo en las siguientes funcionalidades. Las horas adicionales no se presentan como datos históricos, sino como nuevas estimaciones que deberán ser aprobadas por el equipo.
 
-Se establece un escenario académico inicial, considerando la complejidad relativa de cada funcionalidad.
+## 5. Estimación detallada de tiempo
 
 | Funcionalidad | Desarrollo | Prevención | Corrección | Total |
 |---|---:|---:|---:|---:|
-| F-01 Registro de productores | 18 h | 6 h | 2 h | 26 h |
-| F-02 Control de cosechas | 24 h | 4 h | 2 h | 30 h |
-| F-03 Administración del inventario | 30 h | 5 h | 3 h | 38 h |
-| F-04 Control de comercialización | 26 h | 4 h | 2 h | 32 h |
-| F-05 Consulta de información | 14 h | 3 h | 1 h | 18 h |
+| F-01 Productores | 18 h | 6 h | 2 h | 26 h |
+| F-02 Cosechas | 24 h | 4 h | 2 h | 30 h |
+| HU-P1-003 Inventario | 30 h | 5 h | 3 h | 38 h |
+| HU-P1-004 Ventas y clientes | 26 h | 4 h | 2 h | 32 h |
+| HU-P1-005 Reporte mensual | 14 h | 3 h | 1 h | 18 h |
 | **Total** | **112 h** | **22 h** | **10 h** | **144 h** |
 
-Las 8 horas de calidad de F-01 toman como referencia el cálculo de la HU-01 del Plan de Calidad. Las demás cifras son nuevas estimaciones de planificación, no horas realmente trabajadas ni valores confirmados del Sprint 2.
+**Nota de trazabilidad:** Las 8 horas iniciales de calidad se documentaron para la actividad general de producción y venta de miel. Su ubicación provisional en F-01 sirve para construir este escenario; no acredita que el Sprint 2 haya asignado esas horas específicamente al registro de productores. El equipo deberá revisar y conciliar esta asignación con sus historias originales.
 
-### Índice de prevención estimado
+### 5.1 Justificación de tiempos
 
-Índice de prevención = (22 / 32) × 100 = **68.75%**.
+- **Productores:** requiere formularios, validaciones, almacenamiento y consultas.
+- **Cosechas:** necesita asociación con productores, captura de cantidades y consulta histórica.
+- **Inventario:** exige reglas para entradas y salidas, alertas y prevención de inconsistencias, por lo que tiene la mayor estimación.
+- **Ventas:** requiere verificar existencias, registrar operaciones y relacionarlas con clientes.
+- **Reporte mensual:** implica integrar consultas, calcular totales y exportar información en PDF.
 
-Este resultado supera la meta de 60% de prevención indicada en el Plan de Calidad. Sin embargo, solamente representa un escenario estimado que deberá contrastarse con las horas reales de cada sprint.
+### 5.2 Métricas propuestas
 
-## 6. Estimación de costos
+**Horas de calidad:** 22 + 10 = 32 horas.
 
-Para valorar económicamente el esfuerzo se utiliza una tarifa académica hipotética de $150 MXN por hora. Este valor no corresponde a una tarifa documentada en el Plan de Calidad y deberá ser aprobado o sustituido por el equipo.
+**Índice estimado de prevención:** 22 / 32 × 100 = **68.75%**.
 
-| Concepto | Horas | Costo académico |
+**Porcentaje de calidad respecto del esfuerzo total:** 32 / 144 × 100 = **22.22%**.
+
+El índice de prevención estimado supera la meta del 60% contemplada en el Plan de Calidad. No constituye todavía un resultado real de ejecución.
+
+## 6. Estimación financiera
+
+Para construir un escenario comparable se utiliza una tarifa académica propuesta de **$150 MXN por hora**, sujeta a validación del equipo.
+
+| Funcionalidad | Horas | Costo de trabajo |
 |---|---:|---:|
-| Desarrollo | 112 h | $16,800 MXN |
-| Prevención de defectos | 22 h | $3,300 MXN |
-| Corrección de defectos | 10 h | $1,500 MXN |
-| **Total del esfuerzo estimado** | **144 h** | **$21,600 MXN** |
+| Productores | 26 | $3,900 |
+| Cosechas | 30 | $4,500 |
+| Inventario | 38 | $5,700 |
+| Ventas y clientes | 32 | $4,800 |
+| Reporte mensual | 18 | $2,700 |
+| **Total** | **144** | **$21,600 MXN** |
 
-El total no incluye infraestructura, transporte, capacitación ni otros servicios cuyo costo se desconoce.
+### 6.1 Desglose por tipo de esfuerzo
 
-No se considera un presupuesto definitivo ni un gasto realizado.
+| Concepto | Horas | Costo |
+|---|---:|---:|
+| Desarrollo | 112 | $16,800 |
+| Prevención de defectos | 22 | $3,300 |
+| Corrección de defectos | 10 | $1,500 |
+| **Total** | **144** | **$21,600** |
 
-## 7. Estimación del personal requerido
+### 6.2 Insumos adicionales
 
-Se cuenta con cuatro integrantes del equipo y se propone utilizar una distribución de responsabilidades compatible con eduScrum.
-
-| Integrante | Responsabilidad principal propuesta |
+| Insumo | Estado de estimación |
 |---|---|
-| Félix Ángel García García | Coordinación del proyecto, seguimiento del Backlog y revisión de requisitos. |
-| Diego Fidel Sosa Cruz | Aseguramiento de calidad, pruebas y seguimiento de defectos. |
-| Daniel Alejandro López Camarillo | Desarrollo de funcionalidades, integración y pruebas unitarias. |
-| Luis Alexis Morales José | Desarrollo, apoyo a pruebas y documentación técnica. |
+| Computadoras y herramientas de desarrollo | Verificar disponibilidad institucional y del equipo |
+| Hospedaje y base de datos | Por cotizar si se requiere |
+| Internet y conectividad | Por estimar |
+| Pruebas con productores | Por planificar |
+| Capacitación y documentación | Incluye esfuerzo académico; otros gastos, por estimar |
+| Servicios relacionados con Stellar/Drips | Solo si se aprueba una integración técnica concreta |
 
-La coordinación, las pruebas y el desarrollo pueden distribuirse entre varios integrantes. Esta propuesta toma como referencia los roles mencionados en el Plan de Calidad y deberá confirmarse con el equipo.
+El presupuesto de $21,600 MXN corresponde al esfuerzo humano valorizado. **No equivale al costo total definitivo del proyecto**, porque los insumos adicionales todavía no están cuantificados.
 
-## 8. Capacidad de trabajo
+## 7. Estimación de personal requerido
 
-Si los cuatro integrantes participan en las 144 horas estimadas, la carga promedio sería de 36 horas por persona durante el periodo de desarrollo.
+Para desarrollar el proyecto se propone distribuir las actividades entre los cuatro integrantes.
 
-Este promedio no implica que todas las tareas deban repartirse por igual, porque las actividades tienen distinta complejidad y requieren diferentes competencias.
+| Integrante | Perfil propuesto | Responsabilidades |
+|---|---|---|
+| Félix Ángel García García | Coordinación y análisis | Organización de tareas, requisitos, seguimiento del Sprint |
+| Diego Fidel Sosa Cruz | Aseguramiento de calidad | Pruebas, verificación de requisitos, control de defectos |
+| Daniel Alejandro López Camarillo | Desarrollo | Implementación de funcionalidades, validaciones y pruebas unitarias |
+| Luis Alexis Morales José | Desarrollo e integración | Implementación, integración y documentación técnica |
 
-Las fechas y el número de horas semanales se deberán registrar en el tablero de GitHub, tomando en cuenta la disponibilidad real de cada integrante.
+La distribución debe ser aprobada por el equipo. Los roles son compatibles con las responsabilidades registradas en el Plan de Calidad.
 
-## 9. Seguimiento mediante eduScrum
+## 8. Distribución de carga por integrante
 
-Para controlar el cumplimiento de la estimación se propone:
+La siguiente propuesta equilibra la carga total de 144 horas, sin asumir que todos los integrantes realizarán actividades idénticas.
 
-1. Registrar cada funcionalidad como historia de usuario o conjunto de tareas.
-2. Establecer criterios de aceptación.
-3. Asignar responsables y fechas.
-4. Registrar las horas reales de desarrollo, prevención y corrección.
-5. Realizar revisiones periódicas del avance.
-6. Documentar defectos y evidencias de pruebas.
-7. Actualizar las estimaciones ante cambios de alcance.
+| Funcionalidad | Félix | Diego | Daniel | Luis | Total |
+|---|---:|---:|---:|---:|---:|
+| Productores | 8 | 6 | 8 | 4 | 26 |
+| Cosechas | 8 | 8 | 8 | 6 | 30 |
+| Inventario | 8 | 12 | 10 | 8 | 38 |
+| Ventas y clientes | 8 | 6 | 6 | 12 | 32 |
+| Reporte mensual | 4 | 4 | 4 | 6 | 18 |
+| **Total por integrante** | **36** | **36** | **36** | **36** | **144** |
 
-## 10. Evaluación de la estimación
+Cada asignación representa horas de participación en actividades de análisis, desarrollo, pruebas, revisión o documentación.
 
-La administración del inventario presenta la mayor carga estimada debido a la necesidad de controlar cantidades y movimientos de miel sin producir inconsistencias.
+Una vez implementado el tablero, las horas deberán registrarse por tarea e integrante. La distribución equitativa es una propuesta, no una evidencia de horas ya trabajadas.
 
-El control de comercialización también requiere especial atención porque sus registros deben mantener una relación coherente con el inventario.
+## 9. Organización del tablero GitHub Projects
 
-Las 144 horas propuestas representan una línea base inicial. Antes de aprobarla, el equipo deberá revisar las historias originales, la disponibilidad de los integrantes y las tecnologías que se utilizarán.
+La rúbrica exige representar el trabajo en un tablero Kanban operativo, no únicamente en este documento.
+
+Se utilizarán las siguientes columnas:
+
+| Columna | Significado |
+|---|---|
+| Backlog | Historias y tareas identificadas, aún no seleccionadas |
+| To Do | Actividades aprobadas para iniciar |
+| In Progress | Actividades en ejecución |
+| Review | Actividades pendientes de revisión |
+| Done | Actividades verificadas y terminadas |
+
+### 9.1 Tareas sugeridas
+
+| Código | Tarea | Responsable propuesto | Estimación del conjunto |
+|---|---|---|---:|
+| S3-01 | Revisar requisitos y tareas de productores | Félix | Incluida en F-01 |
+| S3-02 | Implementar registro y consulta de cosechas | Daniel y Luis | Incluida en F-02 |
+| S3-03 | Validar inventario y umbral de 10 kg | Daniel y Diego | Incluida en HU-P1-003 |
+| S3-04 | Implementar ventas y rechazo por inventario insuficiente | Luis y Diego | Incluida en HU-P1-004 |
+| S3-05 | Generar reportes mensuales y PDF | Luis y Daniel | Incluida en HU-P1-005 |
+| S3-06 | Revisar métricas y defectos | Diego | Incluida en horas de calidad |
+| S3-07 | Verificar documentación y aceptación | Félix y equipo | Incluida en horas de trabajo |
+
+Estas tareas son una descomposición de las estimaciones anteriores y no representan horas adicionales.
+
+### 9.2 Reglas del tablero
+
+Cada tarjeta de GitHub Projects deberá contener:
+
+- Identificador de historia o tarea.
+- Descripción y objetivo.
+- Responsable asignado.
+- Etiqueta `Sprint-3`.
+- Tiempo estimado.
+- Costo estimado o vínculo a esta tabla.
+- Criterios de aceptación.
+- Estado y evidencia de revisión.
+
+La gestión y actualización del tablero deberán realizarse por los integrantes correspondientes bajo seguimiento del responsable eduScrum.
+
+## 10. Criterios de finalización
+
+Una tarea podrá pasar a Done cuando:
+
+1. Cumpla los criterios de aceptación establecidos.
+2. Cuente con pruebas documentadas.
+3. No presente defectos críticos conocidos.
+4. Su revisión haya sido registrada.
+5. Se hayan actualizado las horas utilizadas.
+6. Existan evidencias que el profesor pueda consultar desde GitHub.
 
 ## 11. Conclusión
 
-La estimación del tiempo, los costos y el personal requerido permite establecer una base para organizar el desarrollo del Sistema de Control y Comercialización de la Producción de Miel.
+La propuesta de estimación permite organizar el desarrollo del Sistema de Control y Comercialización de la Producción de Miel mediante un esfuerzo inicial de 144 horas, una valoración académica de $21,600 MXN en trabajo y una distribución propuesta entre cuatro integrantes.
 
-La propuesta considera cinco áreas funcionales, un esfuerzo preliminar de 144 horas y cuatro integrantes con responsabilidades complementarias.
+El documento recupera las métricas del Plan de Calidad del Sprint 2 y reconoce que algunas historias del plan general corresponden a otros proyectos.
 
-El uso del marco eduScrum y del tablero de GitHub facilitará el seguimiento de las tareas y la actualización de las estimaciones conforme avance el desarrollo.
-
-Los resultados deberán validarse antes de considerarse un compromiso definitivo de tiempo o presupuesto.
+Para completar la evidencia de planificación será necesario validar las estimaciones, relacionarlas con los identificadores oficiales del Backlog y reflejar las tareas, responsables, estados y criterios de aceptación en un tablero GitHub Projects operativo.
